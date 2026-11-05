@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f6fb;
+  color: #222;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section h2 {
+  color: #0b1f4b;
+  margin-bottom: 15px;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1f4b;
+  color: white;
+  padding: 12px 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff7f5b;
+}
+#hero {
+  max-width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #0b1f4b, #e8450a);
+  color: white;
+  padding: 100px 20px;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#hero a {
+  text-decoration: none;
+  margin: 0 8px;
+}
+button {
+  background: #e8410a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c85f00;
+}
+#about ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+#about h3 {
+  margin-top: 15px;
+  color: #0b1f4b;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 15px;
+}
+
+th {
+  background: #0b1f4b;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #fff4e5;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #e8450a;
+}
+
+#teamFilter {
+  width: auto;
+  margin-bottom: 10px;
+}
+.booking-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.booking-container form,
+.summary-card {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.summary-card {
+  border-left: 5px solid #e83a0a;
+  height: fit-content;
+}
+
+.summary-card h3 {
+  color: #0b1f4b;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 100%;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-top: 4px solid #0b1f4b;
+}
+footer {
+  text-align: center;
+  background: #0b1f4b;
+  color: white;
+  padding: 20px;
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
