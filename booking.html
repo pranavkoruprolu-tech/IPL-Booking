@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tickets - IPL 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2>IPL Booking 2026</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#matches">Matches</a></li>
+      <li><a href="booking.html">Book Ticket</a></li>
+      <li><a href="index.html#guidelines">Guidelines</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="booking-form">
+    <h1>Ticket Booking Form</h1>
+
+    <form action="#" method="post">
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name"
+             minlength="3" maxlength="50"
+             placeholder="Enter your full name" required>
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"
+             placeholder="example@gmail.com" required>
+      <br><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone"
+             minlength="10" maxlength="10"
+             pattern="[6-9][0-9]{9}"
+             title="Enter a 10-digit Indian mobile number starting with 6, 7, 8 or 9"
+             placeholder="10-digit mobile number" required>
+      <br><br>
+
+      <label for="match">Select Match:</label>
+      <select id="match" name="match" required>
+        <option value="">-- Select Match --</option>
+        <option value="csk-mi">CSK vs MI - 28 Mar 2026</option>
+        <option value="rcb-kkr">RCB vs KKR - 29 Mar 2026</option>
+        <option value="mi-rcb">MI vs RCB - 01 Apr 2026</option>
+      </select>
+      <br><br>
+
+      <label for="stand">Stand Category:</label>
+      <select id="stand" name="stand" required>
+        <option value="">-- Select Stand --</option>
+        <option value="general">General - ₹1,500</option>
+        <option value="premium">Premium - ₹3,500</option>
+        <option value="vip">VIP - ₹7,000</option>
+      </select>
+      <br><br>
+
+      <label for="tickets">Number of Tickets (1 to 10):</label>
+      <input type="number" id="tickets" name="tickets"
+             min="1" max="10" value="1" required>
+      <br><br>
+
+      <fieldset>
+        <legend>Ticket Delivery:</legend>
+        <input type="radio" id="email-ticket" name="delivery" value="email" required>
+        <label for="email-ticket">E-ticket by Email</label>
+        <input type="radio" id="sms-ticket" name="delivery" value="sms">
+        <label for="sms-ticket">E-ticket by SMS</label>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Additional Preferences:</legend>
+        <input type="checkbox" id="parking" name="extras" value="parking">
+        <label for="parking">Parking Pass</label>
+        <input type="checkbox" id="meal" name="extras" value="meal">
+        <label for="meal">Meal Combo</label>
+        <input type="checkbox" id="jersey" name="extras" value="jersey">
+        <label for="jersey">Team Jersey</label>
+      </fieldset>
+      <br>
+
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and guidelines</label>
+      <br><br>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 IPL Ticket Booking. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
