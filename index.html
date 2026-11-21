@@ -9,8 +9,9 @@
 <body>
 <header>
   <nav>
-    <h2>IPL Booking 2026</h2>
-    <ul>
+    <h2 class="logo">IPL Booking 2026</h2>
+    <button type="button" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul id="navLinks">
       <li><a href="#matches">Matches</a></li>
       <li><a href="booking.html">Book Ticket</a></li>
       <li><a href="#my-bookings">My Bookings</a></li>
@@ -59,52 +60,41 @@
     <option value="kkr">Kolkata Knight Riders</option>
   </select>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Match No.</th>
-        <th>Teams</th>
-        <th>Date &amp; Time</th>
-        <th>Venue</th>
-        <th>General</th>
-        <th>Premium</th>
-        <th>VIP</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr data-teams="csk mi">
-        <td>1</td>
-        <td>CSK vs MI</td>
-        <td>28 Mar 2026, 7:30 PM</td>
-        <td>MA Chidambaram Stadium, Chennai</td>
-        <td>₹1,500</td>
-        <td>₹3,500</td>
-        <td>₹7,000</td>
-        <td><a href="#booking"><button type="button" class="book-btn" data-match="1">Book</button></a></td>
-      </tr>
-      <tr data-teams="rcb kkr">
-        <td>2</td>
-        <td>RCB vs KKR</td>
-        <td>29 Mar 2026, 7:30 PM</td>
-        <td>M. Chinnaswamy Stadium, Bengaluru</td>
-        <td>₹2,000</td>
-        <td>₹4,000</td>
-        <td>₹8,000</td>
-        <td><a href="#booking"><button type="button" class="book-btn" data-match="2">Book</button></a></td>
-      </tr>
-      <tr data-teams="mi rcb">
-        <td>3</td>
-        <td>MI vs RCB</td>
-        <td>01 Apr 2026, 3:30 PM</td>
-        <td>Wankhede Stadium, Mumbai</td>
-        <td>₹2,000</td>
-        <td>₹4,500</td>
-        <td>₹9,000</td>
-        <td><a href="#booking"><button type="button" class="book-btn" data-match="3">Book</button></a></td>
-      </tr>
-    </tbody>
-  </table>
+  <button type="button" id="viewToggle">Switch to List View</button>
+
+  <div id="matchList" class="match-grid">
+
+    <article class="match-card" data-teams="csk mi">
+      <div>
+        <h3>CSK vs MI</h3>
+        <p>Match 1 | 28 Mar 2026, 7:30 PM</p>
+        <p>MA Chidambaram Stadium, Chennai</p>
+        <p>General ₹1,500 | Premium ₹3,500 | VIP ₹7,000</p>
+      </div>
+      <a href="#booking"><button type="button" class="book-btn" data-match="1">Book</button></a>
+    </article>
+
+    <article class="match-card" data-teams="rcb kkr">
+      <div>
+        <h3>RCB vs KKR</h3>
+        <p>Match 2 | 29 Mar 2026, 7:30 PM</p>
+        <p>M. Chinnaswamy Stadium, Bengaluru</p>
+        <p>General ₹2,000 | Premium ₹4,000 | VIP ₹8,000</p>
+      </div>
+      <a href="#booking"><button type="button" class="book-btn" data-match="2">Book</button></a>
+    </article>
+
+    <article class="match-card" data-teams="mi rcb">
+      <div>
+        <h3>MI vs RCB</h3>
+        <p>Match 3 | 01 Apr 2026, 3:30 PM</p>
+        <p>Wankhede Stadium, Mumbai</p>
+        <p>General ₹2,000 | Premium ₹4,500 | VIP ₹9,000</p>
+      </div>
+      <a href="#booking"><button type="button" class="book-btn" data-match="3">Book</button></a>
+    </article>
+
+  </div>
 </section>
 <section id="booking">
   <h2>Book Your Ticket</h2>
@@ -203,6 +193,8 @@
 <footer>
   <p>&copy; 2026 IPL Ticket Booking. All rights reserved.</p>
 </footer>
-  <script src="script.js"></script>
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
