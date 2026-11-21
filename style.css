@@ -308,3 +308,43 @@ nav {
     align-items: flex-start;
   }
 }
+
+/* ---------- Tablets: single column ---------- */
+@media (max-width: 992px) {
+  .match-grid,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-container {
+    flex-direction: column;
+  }
+}
+
+/* ---------- Phones: hamburger menu ---------- */
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+
+  #navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  #navLinks.open {
+    display: flex;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .match-grid.list-view .match-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
