@@ -7,7 +7,7 @@ const matches = {
 
 // ---------- Grab elements ----------
 const teamFilter = document.getElementById("teamFilter");
-const scheduleRows = document.querySelectorAll("#matches tbody tr");
+const scheduleRows = document.querySelectorAll(".match-card");
 const bookingForm = document.getElementById("bookingForm");
 const matchSelect = document.getElementById("match");
 const standSelect = document.getElementById("stand");
